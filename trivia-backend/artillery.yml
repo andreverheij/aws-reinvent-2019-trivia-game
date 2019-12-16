@@ -1,5 +1,5 @@
 # Run with:
-# artillery run -t https://api-test.reinvent-trivia.com artillery.yml
+# artillery run -t https://api-test.trivia.aws.sydney.edu.au artillery.yml
 
 config:
   http:
