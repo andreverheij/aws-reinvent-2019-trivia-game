@@ -1,6 +1,6 @@
 # Trivia Backend API Service
 
-The trivia backend is a REST API that serves questions and answers.  A running example can be seen on [api.trivia.aws.sydney.edu.au](https://api.trivia.aws.sydney.edu.au/api/docs/).
+The trivia backend is a REST API that serves questions and answers.  A running example can be seen on [api.dev.dezignit.com](https://api.dev.dezignit.com/api/docs/).
 
 ## Prep
 
@@ -15,14 +15,14 @@ aws ecr create-repository --region ap-southeast-2 --repository-name reinvent-tri
 Create AWS Certificate Manager certificates for the 'api' and 'test-api' subdomains, then put the unique ARN of those certificates in an AWS Systems Manager Parameter Store parameter.
 
 ```
-aws ssm put-parameter --region ap-southeast-2 --name CertificateArn-api.trivia.aws.sydney.edu.au --type String --value arn:aws:acm:...
+aws ssm put-parameter --region ap-southeast-2 --name CertificateArn-api.dev.dezignit.com --type String --value arn:aws:acm:...
 
-aws ssm put-parameter --region ap-southeast-2 --name CertificateArn-test-api.trivia.aws.sydney.edu.au --type String --value arn:aws:acm:...
+aws ssm put-parameter --region ap-southeast-2 --name CertificateArn-test-api.dev.dezignit.com --type String --value arn:aws:acm:...
 ```
 
 ## Customize
 
-Replace all references to 'trivia.aws.sydney.edu.au' with your own domain name.
+Replace all references to 'dev.dezignit.com' with your own domain name.
 
 # Docker images
 

@@ -24,7 +24,7 @@ aws iam create-service-linked-role --aws-service-name lex.amazonaws.com
 
 ## Customize
 
-Replace all references to 'trivia.aws.sydney.edu.au' with your own domain name.
+Replace all references to 'dev.dezignit.com' with your own domain name.
 
 ## Deploy
 

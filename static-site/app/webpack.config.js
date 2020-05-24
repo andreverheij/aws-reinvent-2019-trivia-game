@@ -10,10 +10,10 @@ var triviaEndpoint;
 var setupEndpoint = function() {
   switch(process.env.NODE_ENV) {
   case 'production':
-    triviaEndpoint = 'https://api.trivia.aws.sydney.edu.au';
+    triviaEndpoint = 'https://api.dev.dezignit.com';
     break;
   case 'test':
-    triviaEndpoint = 'https://api-test.trivia.aws.sydney.edu.au';
+    triviaEndpoint = 'https://api-test.dev.dezignit.com';
     break;
   case 'development':
   case 'local':

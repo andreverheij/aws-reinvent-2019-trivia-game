@@ -50,13 +50,13 @@ class TriviaBackendStack extends cdk.Stack {
 
 const app = new cdk.App();
 new TriviaBackendStack(app, 'TriviaBackendTest', {
-  domainName: 'api-test.trivia.aws.sydney.edu.au',
-  domainZone: 'trivia.aws.sydney.edu.au',
+  domainName: 'api-test.dev.dezignit.com',
+  domainZone: 'dev.dezignit.com',
   env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'ap-southeast-2' }
 });
 new TriviaBackendStack(app, 'TriviaBackendProd', {
-  domainName: 'api.trivia.aws.sydney.edu.au',
-  domainZone: 'trivia.aws.sydney.edu.au',
+  domainName: 'api.dev.dezignit.com',
+  domainZone: 'dev.dezignit.com',
   env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'ap-southeast-2' }
 });
 app.synth();

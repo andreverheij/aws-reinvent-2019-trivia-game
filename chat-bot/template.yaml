@@ -5,7 +5,7 @@ Description: Chat bot for reInvent trivia game
 Parameters:
   TriviaBackendEndpoint:
     Type: String
-    Default: 'https://api.trivia.aws.sydney.edu.au'
+    Default: 'https://api.dev.dezignit.com'
 
 Resources:
   BotFunction:

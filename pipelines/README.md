@@ -20,7 +20,7 @@ aws secretsmanager create-secret --region ap-southeast-2 --name TriviaGitHubToke
 
 ## Customize
 
-Replace all references to 'aws-samples' with your own fork of this repo.  Replace all references to 'trivia.aws.sydney.edu.au' with your own domain name.
+Replace all references to 'aws-samples' with your own fork of this repo.  Replace all references to 'dev.dezignit.com' with your own domain name.
 
 ## Deploy
 

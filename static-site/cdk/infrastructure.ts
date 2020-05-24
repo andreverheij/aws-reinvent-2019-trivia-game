@@ -20,12 +20,12 @@ class TriviaGameInfrastructureStack extends cdk.Stack {
 
 const app = new cdk.App();
 new TriviaGameInfrastructureStack(app, 'TriviaGameStaticSiteInfraTest', {
-    domainName: 'trivia.aws.sydney.edu.au',
+    domainName: 'dev.dezignit.com',
     siteSubDomain: 'test',
     env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'ap-southeast-2' }
 });
 new TriviaGameInfrastructureStack(app, 'TriviaGameStaticSiteInfraProd', {
-    domainName: 'trivia.aws.sydney.edu.au',
+    domainName: 'dev.dezignit.com',
     siteSubDomain: 'www',
     env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'ap-southeast-2' }
 });

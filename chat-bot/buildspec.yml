@@ -11,7 +11,7 @@ phases:
   build:
     commands:
       - aws cloudformation package --template-file template.yaml --s3-bucket $ARTIFACTS_BUCKET --output-template-file TriviaGameChatBotProd.template.yaml
-      - sed 's/api.trivia.aws.sydney.edu.au/api-test.trivia.aws.sydney.edu.au/g' TriviaGameChatBotProd.template.yaml > TriviaGameChatBotTest.template.yaml
+      - sed 's/api.dev.dezignit.com/api-test.dev.dezignit.com/g' TriviaGameChatBotProd.template.yaml > TriviaGameChatBotTest.template.yaml
 
 artifacts:
   files:
