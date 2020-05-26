@@ -16,13 +16,13 @@ Resources:
     Properties:
       ContainerDefinitions:
         - Essential: true
-          Image: !Sub "${AWS::AccountId}.dkr.ecr.ap-southeast-2.${AWS::URLSuffix}/reinvent-trivia-backend:${ImageTag}"
+          Image: !Sub "${AWS::AccountId}.dkr.ecr.us-east-1.${AWS::URLSuffix}/reinvent-trivia-backend:${ImageTag}"
           LogConfiguration:
             LogDriver: awslogs
             Options:
               awslogs-group: !Ref ServiceLogGroup
               awslogs-stream-prefix: Service
-              awslogs-region: ap-southeast-2
+              awslogs-region: us-east-1
           Name: web
           PortMappings:
             - ContainerPort: 80
@@ -241,7 +241,7 @@ Resources:
               - ecr:GetDownloadUrlForLayer
               - ecr:BatchGetImage
             Effect: Allow
-            Resource: !Sub arn:aws:ecr:ap-southeast-2:${AWS::AccountId}:repository/reinvent-trivia-backend
+            Resource: !Sub arn:aws:ecr:us-east-1:${AWS::AccountId}:repository/reinvent-trivia-backend
           - Action: ecr:GetAuthorizationToken
             Effect: Allow
             Resource: "*"

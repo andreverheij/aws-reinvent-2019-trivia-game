@@ -7,17 +7,17 @@ The trivia backend is a REST API that serves questions and answers.  A running e
 Create an ECR repository for both the base Docker image and the application image.
 
 ```
-aws ecr create-repository --region ap-southeast-2 --repository-name reinvent-trivia-backend
+aws ecr create-repository --region us-east-1 --repository-name reinvent-trivia-backend
 
-aws ecr create-repository --region ap-southeast-2 --repository-name reinvent-trivia-backend-base
+aws ecr create-repository --region us-east-1 --repository-name reinvent-trivia-backend-base
 ```
 
 Create AWS Certificate Manager certificates for the 'api' and 'test-api' subdomains, then put the unique ARN of those certificates in an AWS Systems Manager Parameter Store parameter.
 
 ```
-aws ssm put-parameter --region ap-southeast-2 --name CertificateArn-api.dev.dezignit.com --type String --value arn:aws:acm:...
+aws ssm put-parameter --region us-east-1 --name CertificateArn-api.dev.dezignit.com --type String --value arn:aws:acm:us-east-1:...
 
-aws ssm put-parameter --region ap-southeast-2 --name CertificateArn-test-api.dev.dezignit.com --type String --value arn:aws:acm:...
+aws ssm put-parameter --region us-east-1 --name CertificateArn-test-api.dev.dezignit.com --type String --value arn:aws:acm:us-east-1:...
 ```
 
 ## Customize

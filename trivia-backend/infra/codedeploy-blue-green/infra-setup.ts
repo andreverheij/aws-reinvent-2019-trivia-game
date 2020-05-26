@@ -143,11 +143,11 @@ const app = new cdk.App();
 new TriviaBackendStack(app, 'TriviaBackendTest', {
   domainName: 'api-test.dev.dezignit.com',
   domainZone: 'dev.dezignit.com',
-  env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'ap-southeast-2' }
+  env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-1' }
 });
 new TriviaBackendStack(app, 'TriviaBackendProd', {
   domainName: 'api.dev.dezignit.com',
   domainZone: 'dev.dezignit.com',
-  env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'ap-southeast-2' }
+  env: { account: process.env['CDK_DEFAULT_ACCOUNT'], region: 'us-east-1' }
 });
 app.synth();
